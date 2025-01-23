@@ -1,8 +1,13 @@
 .expense-item {
-    width: 75%;
-    background-color: antiquewhite;
-    padding: 0.1rem;
-    margin: auto;
-    margin-bottom: 1rem;
+    color: white;
+    background-color: black;
+    padding: 0.5rem;
     margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
 }
