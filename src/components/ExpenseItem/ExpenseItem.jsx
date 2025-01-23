@@ -8,6 +8,7 @@ const ExpenseItem = (props) => {
             <div>
                 <h1 className="expense-item__name">{props.data.name}</h1>
                 <p className="expense-item__description">{props.data.description}</p>
+                <p className="expense-item__date">{props.data.price}</p>
             </div>
             <div className="expense-date">
                 <div className="expense-date__month">{props.data.date.toLocaleString("default", {month:"long"})}</div>
