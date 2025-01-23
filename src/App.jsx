@@ -1,5 +1,6 @@
 import './App.css'
-import ExpenseItem from './components/ExpenseItem/ExpenseItem.jsx'
+import ExpenseItem from './components/ExpenseItem.jsx'
+import Expenses from './components/Expenses.jsx'
 
 function App() {
   const data = [
@@ -27,13 +28,7 @@ function App() {
   ]
 
   return (
-    <>
-      {
-        data.map(item => (
-          <ExpenseItem key={item.id} data={item} />
-        ))
-      }
-    </>
+    <Expenses data={data}/>
   )
 }
 
