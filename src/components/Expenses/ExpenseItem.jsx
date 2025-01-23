@@ -1,4 +1,4 @@
-import Card from "./Card.jsx"
+import Card from "../UI/Card.jsx"
 import ExpenseDate from "./ExpenseDate.jsx"
 import "./ExpenseItem.css"
 
