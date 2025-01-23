@@ -1,8 +1,7 @@
+import ExpenseDate from "./ExpenseDate.jsx"
 import "./ExpenseItem.css"
-import "./ExpenseDate.css"
 
 const ExpenseItem = (props) => {
-    console.log(props.data)
     return (
         <div className="expense-item">
             <div>
@@ -10,11 +9,7 @@ const ExpenseItem = (props) => {
                 <p className="expense-item__description">{props.data.description}</p>
                 <p className="expense-item__date">{props.data.price}</p>
             </div>
-            <div className="expense-date">
-                <div className="expense-date__month">{props.data.date.toLocaleString("default", {month:"long"})}</div>
-                <div className="expense-date__day">{props.data.date.getDay()}</div>
-                <div className="expense-date__year">{props.data.date.getYear()}</div>
-            </div>
+            <ExpenseDate data={props.data} />
         </div>
     )
 }
