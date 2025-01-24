@@ -17,7 +17,7 @@ const ExpenseForm = (props) => {
 
         const expenseData = {
             name: name,
-            desc: desc,
+            description: desc,
             price: price,
             date: new Date(date)
         }
@@ -38,7 +38,7 @@ const ExpenseForm = (props) => {
             <div className="new-expense__controls">
                 <div className="new-expense__control">
                     <label>Nimi</label><br />
-                    <input type="text" value={name} onChange={updateName}/>
+                    <input type="text" value={name} onChange={updateName} required/>
                 </div>
                 <div className="new-expense__control">
                     <label>Kirjeldus</label><br />
@@ -46,11 +46,11 @@ const ExpenseForm = (props) => {
                 </div>
                 <div className="new-expense__control">
                     <label>Hind</label><br />
-                    <input type="number" min={0.01} step={0.01} value={price} onChange={updatePrice}/>
+                    <input type="number" min={0.01} step={0.01} value={price} onChange={updatePrice} required/>
                 </div>
                 <div className="new-expense__control">
                     <label>Kuupäev</label><br />
-                    <input type="date" value={date} onChange={updateDate}/>
+                    <input type="date" value={date} onChange={updateDate} required/>
                 </div>
             </div>
             <div className="new-expense__actions">
