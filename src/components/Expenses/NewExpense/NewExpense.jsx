@@ -3,7 +3,7 @@ import "./NewExpense.css"
 
 const NewExpense = (props) => {
     const newExpenseDataHandler = (expenseData) => {
-        console.log(expenseData)
+        props.onAddExpense(expenseData)
     }
 
     return (
