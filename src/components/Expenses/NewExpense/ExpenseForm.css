@@ -1,0 +1,29 @@
+form {
+    max-width: 30rem;
+    margin: auto;
+    background-color: rgb(198, 231, 220);
+    border-radius: 1rem;
+    border: 2px solid white;
+}
+
+.new-expense__controls {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.new-expense__actions {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new-expense__actions button {
+    padding: 0.5rem 1rem;
+    width: fit-content;
+    border: 2px solid rgb(125, 209, 99);
+    background-color: rgb(147, 231, 154);
+}
