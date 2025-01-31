@@ -14,7 +14,7 @@ const Expenses = (props) => {
         }
     }
 
-    const expensesContent = <p>Kulusid ei ole!</p>
+    let expensesContent = <p>Kulusid ei ole!</p>
     const filteredExpenses = props.data.filter(item => 
         item.date.getFullYear() === selectedYear
     )
