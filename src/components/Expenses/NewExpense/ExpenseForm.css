@@ -1,9 +1,8 @@
 form {
     max-width: 30rem;
     margin: auto;
-    background-color: rgb(198, 231, 220);
-    border-radius: 1rem;
-    border: 2px solid white;
+    background-color: rgb(22, 73, 17);
+    color: white;
 }
 
 .new-expense__controls {
