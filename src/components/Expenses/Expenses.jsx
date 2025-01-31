@@ -5,7 +5,7 @@ import ExpensesFilter from "./ExpensesFilter/ExpensesFilter.jsx"
 import { useState } from "react"
 
 const Expenses = (props) => {
-    const [selectedYear, setSelectedYear] = useState(null)
+    const [selectedYear, setSelectedYear] = useState(2023)
 
     const onFilterChangedHandler = (newYear) => {
         const year = parseInt(newYear)
@@ -14,21 +14,26 @@ const Expenses = (props) => {
         }
     }
 
-    const filterExpenses = (year) => {
-        if (!year) return []
+    const expensesContent = <p>Kulusid ei ole!</p>
+    const filteredExpenses = props.data.filter(item => 
+        item.date.getFullYear() === selectedYear
+    )
 
-        return props.data.filter(item => item.date.getFullYear() === year)
-        .map(item => <ExpenseItem
+    if (filteredExpenses.length !== 0) {
+        expensesContent = filteredExpenses.map(item => 
+            <ExpenseItem
                 key={item.id}
                 data={item}
             />
         )
     }
+    
+    
 
     return (
         <Card className="expenses">
             <ExpensesFilter onFilterChanged={onFilterChangedHandler} />
-            {filterExpenses(selectedYear)}
+            {expensesContent}
         </Card>
     )
 }

@@ -3,6 +3,7 @@ import './App.css'
 import Expenses from './components/Expenses/Expenses.jsx'
 import NewExpense from './components/Expenses/NewExpense/NewExpense.jsx'
 
+/*
 const data = [
   {
     id: 0,
@@ -25,10 +26,10 @@ const data = [
     price: 5.60,
     description: "Mõnus praad."
   }
-]
+]*/
 
 function App() {
-  const [expenses, setExpenses] = useState(data)
+  const [expenses, setExpenses] = useState([])
 
   const addExpenseHandler = (expenseData) => {
     setExpenses((prevExpenses) => {
