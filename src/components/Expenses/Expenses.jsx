@@ -16,7 +16,7 @@ const Expenses = (props) => {
 
     let expensesContent = <p>Kulusid ei ole!</p>
     const filteredExpenses = props.data.filter(item => 
-        item.date.getFullYear() === selectedYear
+        new Date(item.date).getFullYear() === selectedYear
     )
 
     if (filteredExpenses.length !== 0) {
