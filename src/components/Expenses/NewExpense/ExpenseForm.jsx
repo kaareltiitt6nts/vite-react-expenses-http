@@ -31,10 +31,15 @@ const ExpenseForm = (props) => {
         setDesc("")
         setPrice("")
         setDate("")
+        resetHandler()
+    }
+
+    const resetHandler = () => {
+        props.onReset()
     }
 
     return (
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submitHandler} onReset={resetHandler}>
             <div className="new-expense__controls">
                 <div className="new-expense__control">
                     <label>Nimi</label><br />
@@ -55,6 +60,7 @@ const ExpenseForm = (props) => {
             </div>
             <div className="new-expense__actions">
                 <button type="submit">Lisa</button>
+                <button type="reset">Katkesta</button>
             </div>
         </form>
     )
