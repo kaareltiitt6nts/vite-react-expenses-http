@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Expenses from './components/Expenses/Expenses.jsx'
 import NewExpense from './components/Expenses/NewExpense/NewExpense.jsx'
@@ -29,7 +29,14 @@ const data = [
 ]*/
 
 function App() {
-  const [expenses, setExpenses] = useState([])
+  const [expenses, setExpenses] = useState(() => {
+    const expenseFormLocalStorage = JSON.parse(localStorage.getItem("expenses"))
+    return expenseFormLocalStorage || []
+  })
+
+  useEffect(() => {
+    localStorage.setItem("expenses", JSON.stringify(expenses))
+  })
 
   const addExpenseHandler = (expenseData) => {
     setExpenses((prevExpenses) => {

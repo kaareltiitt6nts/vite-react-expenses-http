@@ -27,8 +27,6 @@ const Expenses = (props) => {
             />
         )
     }
-    
-    
 
     return (
         <Card className="expenses">
