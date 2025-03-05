@@ -42,9 +42,31 @@ function App() {
   }, [])
 
   const addExpenseHandler = (expenseData) => {
-    setExpenses((prevExpenses) => {
-      return [expenseData, ...prevExpenses]
-    })
+    const addExpense = async (expenseData) => {
+      try {
+        const response = await fetch("http://localhost:3001/add-expense", {
+          method: "POST",
+          body: JSON.stringify(expenseData),
+          headers: {
+            "Content-Type": "application/json"
+          }
+        })
+
+        const responseData = await response.json()
+        if (!response.ok) {
+          throw new Error("Failed saving data")
+        }
+        setExpenses([expenseData, ...expenses])
+      } catch (error) {
+        seterror({
+          title: "Viga!",
+          message: "Andmete salvestamine ebaõnnestus. Palum proovige hiljem uuesti."
+        })
+        setShowerror(true)
+      }
+    }
+    
+    addExpense(expenseData)
   }
 
   return (
