@@ -1,0 +1,37 @@
+[
+  {
+    "id": 0,
+    "date": "2023-01-18",
+    "name": "Krõpsud",
+    "price": 3.59,
+    "description": "Pakk Lays stronge."
+  },
+  {
+    "id": 1,
+    "date": "2024-02-18",
+    "name": "Dipikaste",
+    "price": 2.50,
+    "description": "Väike küüslaugune dipikas."
+  },
+  {
+    "id": 2,
+    "date": "2025-1-03",
+    "name": "Šnitslipraad",
+    "price": 5.60,
+    "description": "Mõnus praad."
+  },
+  {
+    "id": 3,
+    "date": "2025-06-28",
+    "name": "Šnitslipraad",
+    "price": 5.60,
+    "description": "Mõnus praad."
+  },
+  {
+    "id": 4,
+    "date": "2025-04-18",
+    "name": "Šnitslipraad",
+    "price": 5.60,
+    "description": "Mõnus praad."
+  }
+]
